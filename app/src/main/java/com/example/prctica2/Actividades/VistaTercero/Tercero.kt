@@ -76,12 +76,32 @@ fun Tercero(context: Context, navController: NavController) {
     }
     var enableButtons by remember { mutableStateOf(true) }
     if (cMen){
-        Dialogo().Dialogo(
-            onDismissRequest = { navController.navigate(Rutas.PantallaMenu.ruta)},
-            painter = R.drawable.fallado,
-            imageDescription = "a",
-            text  =" AAAAAAAA"
-        )
+        if(aciertos == listaPreguntas.size-1){
+            Dialogo().Dialogo(
+                onDismissRequest = { navController.navigate(Rutas.PantallaMenu.ruta)},
+                painter = R.drawable.sobresaliente,
+                imageDescription = "Imagen",
+                text  = "Has sacado un sobresaliente. Enhorabuena"
+            )
+
+        }else if (aciertos >= (listaPreguntas.size-1)/2){
+            Dialogo().Dialogo(
+                onDismissRequest = { navController.navigate(Rutas.PantallaMenu.ruta)},
+                painter = R.drawable.suficiente,
+                imageDescription = "Imagen",
+                text  = "Has sacado un suficiente"
+            )
+
+        }else{
+            Dialogo().Dialogo(
+                onDismissRequest = { navController.navigate(Rutas.PantallaMenu.ruta)},
+                painter = R.drawable.fallado,
+                imageDescription = "Imagen",
+                text  = "Lo siento, has suspendido"
+            )
+
+        }
+
     }
 
     Column(
