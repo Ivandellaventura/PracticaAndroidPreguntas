@@ -8,5 +8,7 @@ sealed class Rutas(val ruta: String) {
     object PantallaDos: Rutas("Primero")
     object PantallaTres: Rutas("Segundo")
     object PantallaCuatro: Rutas("Tres")
+    object PantallaSubir: Rutas("PantallaSubir")
+
 
 }

@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.prctica2.Actividades.Preguntas.PantallaSubir
 import com.example.prctica2.Actividades.VistaPrimero.Primero
 import com.example.prctica2.Actividades.VistaSegundo.Segundo
 import com.example.prctica2.Actividades.VistaTercero.Tercero
@@ -24,6 +25,9 @@ fun GrafoNav(context: Context){
         }
         composable(Rutas.PantallaCuatro.ruta){
             Tercero(context = context, navController)
+        }
+        composable(Rutas.PantallaSubir.ruta){
+            PantallaSubir(navController = navController, context = context)
         }
 
     }

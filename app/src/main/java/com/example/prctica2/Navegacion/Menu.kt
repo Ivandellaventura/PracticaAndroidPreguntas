@@ -30,6 +30,10 @@ fun Menu(navController: NavHostController){
             Text(text = "Estadísticas")
 
         }
+        Button(onClick = { navController.navigate(Rutas.PantallaSubir.ruta) }) {
+            Text(text = "Añadir Preguntas")
+
+        }
 
     }
 

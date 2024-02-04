@@ -44,7 +44,7 @@ fun Primero(context: Context, navController: NavController) {
     var aciertos by remember { mutableStateOf(sharedPref.getInt("Aciertos", 0)) }
     var fallos by remember { mutableStateOf(sharedPref.getInt("Fallos", 0)) }
 
-    var listaPreguntas = Preguntas().Datos()
+    var listaPreguntas = Preguntas(context =  context).listadoPreguntas
     var Contador by remember {
         mutableStateOf(0)
     }
